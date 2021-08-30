@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/bootstrap4/css/bootstrap.min.css')}}">
+    <title>Prediction</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-3 col-sm-2">
+        <h5>firs div</h5>
+    </div>
+    <div class="col-6 col-sm-8 mt-3">
+        <div class="card">
+            <div class="card-header  d-flex justify-content-center">
+              <strong>MAIZE HEALTH STATUS PREDICTION</strong>
+            </div>
+            <div class="card-body">
+                <form action="{{url_for('prediction')}}" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                      <label for="image" class="form-label">Upload Image</label>
+                      <input type="file" class="form-control" id="image" name="myimage">
+                    </div>
+                    
+                    <input type="submit" class="btn btn-primary" value="Predict">
+                  </form>
+            </div>
+          </div>
+    </div>
+    <div class="col-3 col-sm-2">
+        <h5>third div</h5>
+    </div>
+    </div>
+      </div>  
+</body>
+</html>
